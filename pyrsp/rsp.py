@@ -344,6 +344,13 @@ class RSP(object):
     def s(self):
         return self.fetch(b"s")
 
+    def si(self):
+        # Will step  into call
+        return self.fetch(b"si")
+
+    def ni(self):
+        return self.fetch(b"ni")
+
     # They will be replaced with vCont variants if supported by the stub.
     step = s
     cont = c
