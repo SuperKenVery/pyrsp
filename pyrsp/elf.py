@@ -127,7 +127,7 @@ class ELF:
     def get_bin(self):
         """ returns the .text and .rodata sections from elf file fname
         """
-        with open(self.name,'r') as stream:
+        with open(self.name,'rb') as stream:
             elffile = ELFFile(stream)
 
             # get text seg address
